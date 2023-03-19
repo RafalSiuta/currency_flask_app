@@ -1,0 +1,52 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+
+{{ super() }}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>Kursy NBP: </h1>
+
+	  <table class="table">
+            <tr class="table-subtitles">
+                <td>Flaga</td>
+                <td>Kraj</td>
+                <td>Nazwa waluty</td>
+                <td>Ilość</td>
+                <td>Kod waluty</td>
+                <td>Średni kurs</td>
+                <td>Data</td>
+            </tr>
+	    {% for value in currency %}
+            <tr>
+                <td><img src="{{value.flag_img}}"></td>
+                <td>{{value.country}}</td>
+                <td>{{value.name}}</td>
+                <td>{{value.qty}}</td>
+                <td>{{value.symbol}}</td>
+                <td>{{value.values[(value.values | length-1)].value}}</td>
+                <td>{{value.values[(value.values | length-1)].date}}</td>
+<!--                <td>{{value.values | length-1 }}</td>-->
+<!--                {% for val in value.values %}-->
+<!--                    <td>{{val.value | last}}</td>-->
+<!--                {% endfor %}-->
+<!--                {% for val in value.values %}-->
+<!--                    <td>{{val.date}}</td>-->
+<!--                {% endfor %}-->
+            </tr>
+        {% endfor %}
+  	  </table>
+
+
+    </div>
+  </div>
+</div>
+{% endblock %}

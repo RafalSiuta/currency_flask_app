@@ -1,0 +1,52 @@
+/* This CSS file will need to be added to the styling of 
+your web pages for the styles to be rendered. */
+
+body {
+background-color: #1c1a24; //#333;
+color: white;
+}
+
+.table-subtitles td{
+    font-size:30px;
+    background-color: #1c1a24;
+}
+tr td {
+    color: #ffc107;
+}
+tr td img {
+    width:60px;
+    height:35px;
+}
+tr td:nth-child(3) {
+    color: #80e27e;
+}
+tr td:nth-child(6) {
+    color: #80e27e;
+}
+/*
+tr td:nth-child(3) {
+    color: #80e27e;
+}
+tr td:nth-child(4) {
+    color: #ffc107;
+}
+tr td:nth-child(5) {
+    color: #6ec6ff;
+}
+tr:nth-child(2n-1){
+    background-color: #302d3d;//#403f3f;
+}
+*/
+.jumbotron {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  color: white;
+  background-color: #333;
+}
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
